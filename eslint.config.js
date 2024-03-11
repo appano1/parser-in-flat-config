@@ -12,6 +12,7 @@ export default tseslint.config(
   ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
+      parser: tsParser,
       globals: {
         ...globals.node,
         ...globals.browser,
@@ -20,7 +21,6 @@ export default tseslint.config(
       parserOptions: {
         project: true,
         tsconfigRootDir: import.meta.dirname,
-        parser: tsParser,
       },
     },
   },
